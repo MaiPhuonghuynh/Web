@@ -44,7 +44,7 @@ public class menu extends HttpServlet {
 
 		request.setAttribute("ls", ls);
 		RequestDispatcher dispatcher = getServletContext()
-				.getRequestDispatcher("/html/monngonmoingay/monngonmoingay.jsp");
+				.getRequestDispatcher("/monngonmoingay.jsp");
 		dispatcher.forward(request, response);
 	}
 
