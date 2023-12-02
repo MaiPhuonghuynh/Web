@@ -45,22 +45,22 @@ public class dangky extends HttpServlet {
 		String password = request.getParameter("password");
 
 		String url = "/dangky.jsp";
-		DAOAccount dao = new DAOAccount();
-		Account acc = dao.getById(username);
-		if (acc == null) {
-			acc = new Account(username, password, email, phoneNumber, address, name);
-			dao.add(acc);
-			request.getSession().setAttribute("user", acc);
-			url = "/trangchu.jsp";
-		} else {
-			request.setAttribute("name", name);
-			request.setAttribute("phone", phoneNumber);
-			request.setAttribute("address", address);
-			request.setAttribute("email", email);
-			request.setAttribute("er_Register", true);
+		if (username != "") {
+			DAOAccount dao = new DAOAccount();
+			Account acc = dao.getById(username);
+			if (acc == null) {
+				acc = new Account(username, password, email, phoneNumber, address, name);
+				dao.add(acc);
+				request.getSession().setAttribute("user", acc);
+			} else {
+				request.setAttribute("name", name);
+				request.setAttribute("phone", phoneNumber);
+				request.setAttribute("address", address);
+				request.setAttribute("email", email);
+				request.setAttribute("er_Register", true);
+			}
 		}
-		RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
-		rd.forward(request, response);
+		request.getServletContext().getRequestDispatcher(url).forward(request, response);
 	}
 
 	/**

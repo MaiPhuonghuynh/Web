@@ -31,6 +31,8 @@ public class DAOAccount implements DAOInterface<Account> {
 
 	@Override
 	public Account getById(String s) {
+		if (s == "")
+			return null;
 		String query = "select * from account" + " where a_username = ?;";
 		try {
 			ps = conn.prepareStatement(query);
