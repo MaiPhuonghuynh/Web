@@ -60,7 +60,7 @@ public class dangky extends HttpServlet {
 				request.setAttribute("er_Register", true);
 			}
 		}
-		request.getServletContext().getRequestDispatcher(url).forward(request, response);
+		request.getServletContext().getRequestDispatcher("/dangky.jsp").forward(request, response);
 	}
 
 	/**

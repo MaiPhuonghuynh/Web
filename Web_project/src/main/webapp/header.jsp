@@ -254,12 +254,12 @@
 								</c:when>
 							</c:choose>
 
-							<li><a class="js-wishlist-link" href="monanyeuthich.html"
+							<li><a class="js-wishlist-link" href=""
 								aria-label="Món ăn Yêu thích" title="Món ăn Yêu thích">Món
 									ăn yêu thích</a></li>
 						</ul>
 					</div>
-					<a class="button-header" href="/datban.jsp" title="đặt bàn">Đặt
+					<a class="button-header" href="datban" title="đặt bàn">Đặt
 						bàn</a>
 
 				</div>
