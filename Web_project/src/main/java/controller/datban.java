@@ -47,23 +47,23 @@ public class datban extends HttpServlet {
 		String quantity = request.getParameter("quantity");
 		String time = request.getParameter("time");
 		
-//		Pattern phonePt = Pattern.compile("\\d{10}");
-//		Matcher phoneMc = phonePt.matcher(phone);
-//		if (!phoneMc.matches() || phone.charAt(0) != '0') {
-//			checkError = true;
-//			request.setAttribute("e_phoneNumber", "Số điện thoại nhập không hợp lệ");
-//		} else
-//			request.setAttribute("phone", phone);
-//		try {
-//			int quantityInt = Integer.parseInt(quantity);
-//			if (quantityInt <= 0) {
-//				checkError = true;
-//				request.setAttribute("e_quantity", "Số người đặt bàn không hợp lệ (số người > 0)");
-//			} else
-//				request.setAttribute("quantity", quantity);
-//		} catch (Exception e) {
-//			// TODO: handle exception
-//		}
+		Pattern phonePt = Pattern.compile("\\d{10}");
+		Matcher phoneMc = phonePt.matcher(phone);
+		if (!phoneMc.matches() || phone.charAt(0) != '0') {
+			checkError = true;
+			request.setAttribute("e_phoneNumber", "Số điện thoại nhập không hợp lệ");
+		} else
+			request.setAttribute("phone", phone);
+		try {
+			int quantityInt = Integer.parseInt(quantity);
+			if (quantityInt <= 0) {
+				checkError = true;
+				request.setAttribute("e_quantity", "Số người đặt bàn không hợp lệ (số người > 0)");
+			} else
+				request.setAttribute("quantity", quantity);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 
 		request.setAttribute("name", name);
 		request.setAttribute("email", email);
