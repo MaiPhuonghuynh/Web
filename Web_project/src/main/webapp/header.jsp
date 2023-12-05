@@ -160,9 +160,7 @@
 
 							<li class="nav-item "><a class="a-img"
 								href="html/lienhe\lienhe.html" title="Liên hệ"> Liên hệ </a></li>
-							<li class="account d-lg-none d-block">
-								
-							</li>
+							<li class="account d-lg-none d-block"></li>
 						</ul>
 					</nav>
 				</div>
@@ -249,7 +247,7 @@
 										href="\html\account\login.html" title="Tài khoản">Tài
 											khoản</a></li>
 									<li class="ng-scope"><a rel="nofollow"
-										href="\html\account\register.html" title="Đăng xuất">Đăng
+										href="dangxuat" title="Đăng xuất">Đăng
 											xuất</a></li>
 								</c:when>
 							</c:choose>
@@ -259,8 +257,7 @@
 									ăn yêu thích</a></li>
 						</ul>
 					</div>
-					<a class="button-header" href="datban" title="đặt bàn">Đặt
-						bàn</a>
+					<a class="button-header" href="datban" title="đặt bàn">Đặt bàn</a>
 
 				</div>
 				<div class="col-12 header-control  d-lg-none d-block">

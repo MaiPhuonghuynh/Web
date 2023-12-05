@@ -10,6 +10,7 @@ import java.io.IOException;
 /**
  * Servlet implementation class addCart
  */
+@WebServlet("/dathang")
 public class addCart extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
