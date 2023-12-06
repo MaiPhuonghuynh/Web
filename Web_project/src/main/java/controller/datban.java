@@ -15,7 +15,6 @@ import jakarta.servlet.http.HttpSession;
 /**
  * Servlet implementation class datban
  */
-
 @WebServlet("/datban")
 public class datban extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -30,6 +29,11 @@ public class datban extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)

@@ -33,34 +33,32 @@ public class dangky extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
-
-		String name = request.getParameter("name");
-		String phoneNumber = request.getParameter("PhoneNumber");
-		String address = request.getParameter("address");
-		String email = request.getParameter("email");
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
-
-		String url = "/dangky.jsp";
-		if (username != "") {
-			DAOAccount dao = new DAOAccount();
-			Account acc = dao.getById(username);
-			if (acc == null) {
-				acc = new Account(username, password, email, phoneNumber, address, name);
-				dao.add(acc);
-				request.getSession().setAttribute("user", acc);
-			} else {
-				request.setAttribute("name", name);
-				request.setAttribute("phone", phoneNumber);
-				request.setAttribute("address", address);
-				request.setAttribute("email", email);
-				request.setAttribute("er_Register", true);
-			}
-		}
-		request.getServletContext().getRequestDispatcher("/dangky.jsp").forward(request, response);
+//		request.setCharacterEncoding("UTF-8");
+//		response.setCharacterEncoding("UTF-8");
+//		response.setContentType("text/html; charset=UTF-8");
+//
+//		String name = request.getParameter("name");
+//		String phoneNumber = request.getParameter("PhoneNumber");
+//		String address = request.getParameter("address");
+//		String email = request.getParameter("email");
+//		String username = request.getParameter("username");
+//		String password = request.getParameter("password");
+//
+//		String url = "/dangky.jsp";
+//		DAOAccount dao = new DAOAccount();
+//		Account acc = dao.getById(username);
+//		if (acc == null) {
+//			acc = new Account(username, password, email, phoneNumber, address, name);
+//			dao.add(acc);
+//			request.getSession().setAttribute("user", acc);
+//		} else {
+//			request.setAttribute("name", name);
+//			request.setAttribute("phone", phoneNumber);
+//			request.setAttribute("address", address);
+//			request.setAttribute("email", email);
+//			request.setAttribute("er_Register", true);
+//		}
+//		request.getServletContext().getRequestDispatcher("/dangky.jsp").forward(request, response);
 	}
 
 	/**
