@@ -247,10 +247,9 @@
 									fill="white"></path>
 								</svg> <c:if test="${GioHang.bill.size > 0 }">
 								<span class="count_item_pr">${GioHang.bill.size()}</span>
-							</c:if>
-							<div class="top-cart-content">
-								<div class="CartHeaderContainer">
-									<c:if test="${GioHang.bill.size() > 0 }">
+							</c:if> <c:if test="${GioHang.bill.size() > 0 }">
+								<div class="top-cart-content">
+									<div class="CartHeaderContainer">
 										<form action="/cart" method="post" novalidate=""
 											class="cart ajaxcart cartheader">
 											<div
@@ -316,8 +315,11 @@
 												</div>
 											</div>
 										</form>
-									</c:if>
-									<c:if test="${GioHang.bill.size() <=0 || GioHang == null}">
+									</div>
+								</div>
+							</c:if> <c:if test="${GioHang.bill.size() <=0 || GioHang == null}">
+								<div class="top-cart-content">
+									<div class="CartHeaderContainer">
 										<div class="cart--empty-message">
 											<svg xmlns="http://www.w3.org/2000/svg"
 												xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
@@ -335,9 +337,10 @@
 													d="M126.292,85.333h-0.263c-1.884,0-3.413,1.529-3.413,3.413c0,0.466,0.092,0.911,0.263,1.316v17.457    c0,12.233-9.953,22.187-22.187,22.187s-22.187-9.953-22.187-22.187V88.747c0-1.884-1.529-3.413-3.413-3.413    s-3.413,1.529-3.413,3.413v18.773c0,15.998,13.015,29.013,29.013,29.013s29.013-13.015,29.013-29.013V88.747    C129.705,86.863,128.176,85.333,126.292,85.333z"></path> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg>
 											<p>Không có sản phẩm nào trong giỏ hàng của bạn</p>
 										</div>
-									</c:if>
+									</div>
 								</div>
-							</div>
+							</c:if>
+
 
 
 

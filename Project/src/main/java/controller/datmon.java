@@ -42,7 +42,7 @@ public class datmon extends HttpServlet {
 		lsGioHang.add(food);
 		System.out.println(lsGioHang);
 		session.setAttribute("GioHang", lsGioHang);
-		request.getServletContext().getRequestDispatcher("/menu").forward(request, response);
+		request.getServletContext().getRequestDispatcher("/monngonmoingay.jsp").forward(request, response);
 	}
 
 	/**
