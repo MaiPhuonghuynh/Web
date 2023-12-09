@@ -48,3 +48,8 @@ var swiper = new Swiper('.danhgia-slider', {
         clickable: true,
     }
 });
+// lick nút thêm vào giỏ hàng hiện ra bảng nhỏ
+let popupcartmobile = document.querySelector('.popup-cart-mobile');
+document.querySelector('.btn-cart').onclick = () => {
+    popupcartmobile.classList.toggle('active');
+}
